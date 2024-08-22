@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unwhelm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--heading at top of page > "unwhelm, its gonna be ok"-->
+    <div class = "heading-container">
+        <h1>unwhelm</h1>
+        <p>it's gonna be ok</p>
+    </div>
+
+    <!--initial window for inputting tasks-->
+    <div class = "input-page-container" id = 'input-page-container'>
+        <div class = "input-main-container">
+            <p>enter each task's information below</p>
+            <!--container for user inputs-->
+            <div class = "input-field-container">
+                <div class = "task-section">
+                    <h1>task name:</h1>
+                    <input type="text" id="taskInputField" name="Name" placeholder="enter the name of your task...">
+                </div>
+                <div class = "priority-section">
+                    <h1>priority:</h1>
+                    <select name="priorityDrop" id="priorityDropDown">
+                        <option value="High">high</option>
+                        <option value="Medium">medium</option>
+                        <option value="Low">low</option>
+                      </select>
+                </div>
+                <div class = "time-section">
+                    <h1>time:</h1>
+                      <select name="timeDrop" id="timeDropDown">
+                        <option value="5 mins">5 mins</option>
+                        <option value="15 mins">15 mins</option>
+                        <option value="30 mins">30 mins</option>
+                        <option value="45 mins">45 mins</option>
+                        <option value="60 mins">60 mins</option>
+                      </select>
+                </div>
+            </div>
+            <!--buttons for actions-->
+            <button type="button" id="addTaskButton">+ add task</button>
+            <button type="button" id="beginUnwhelmButton">begin unwhelming</button>
+            <p id = "taskHeading">tasks that you've entered:</p>
+            <!--container to store tasks-->
+            <div class = "task-storage-container">
+                <div class = "task-column" id = "taskContainer">
+                    <h1>task name:</h1>
+                </div>
+                <div class = "priority-column" id = "priorityContainer">
+                    <h1>priority:</h1>
+                </div>
+                <div class = "time-column" id = "timeContainer">
+                    <h1>time:</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- window for task at hand-->
+    <div class = "task-page-container" id = "task-page-container">
+        <div class = "current-task-main-container">
+            <p>here's the task at hand</p>
+            <div class = "current-task-container" id = "current-task-container">
+                <div class = "current-task-name-column" id = "current-task-name-column">
+                    <h1>task name:</h1>
+                </div>
+                <div class = "current-task-priority-column" id = "current-task-priority-column">
+                    <h1>priority:</h1>
+                </div>
+                <div class = "current-task-time-column" id = "current-task-time-column">
+                    <h1>time:</h1>
+                </div>
+            </div>
+            <p>no rush, when you're done just click this button</p>
+            <button type="button" id="completeTaskButton">task complete</button>
+            <div class = "completed-task" id = "complete-page-container">
+                <p>great job, when you're ready for the next task, click this button</p>
+                <button type="button" id="nextTaskButton">next task</button>
+            </div>
+        </div>
+    </div>
+
+    <!--window for finishing the tasks-->
+    <div class = "finished-page-container" id = "finished-page-container">
+        <h3>great job,</h3>
+        <h3>you've finished all of your tasks!</h3>
+        <p>feeling better? if not, make another list by clicking this button</p>
+        <button type="button" id="startAgainButton" value="Start Again" onClick="window.location.reload();">start again</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
